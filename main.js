@@ -13,7 +13,7 @@ const productosEnVenta = [
 
     {id: 005, nombre:"Celular ZZZ", marca: "Motorola", descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eius ratione cum, atque quibusdam doloremque, iure repellendus voluptates quos odio exercitationem, deserunt illo aliquid! Beatae est minima rem deleniti voluptatibus.", stock: 6,precio: 56000},
 
-    {id: 0057, nombre:"Caloventor", marca: "Liliana", descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eius ratione cum, atque quibusdam doloremque, iure repellendus voluptates quos odio exercitationem, deserunt illo aliquid! Beatae est minima rem deleniti voluptatibus.", stock: 6,precio: 8000},
+    {id: 00, nombre:"Caloventor", marca: "Liliana", descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eius ratione cum, atque quibusdam doloremque, iure repellendus voluptates quos odio exercitationem, deserunt illo aliquid! Beatae est minima rem deleniti voluptatibus.", stock: 6,precio: 8000},
 
 ]
 
@@ -25,16 +25,21 @@ const carrito = []
 ////////////// Función agregar al carrito //////////////
 ///////////////////////////////////////////////////////
 
-function agregarAlCarrito(producto){
+function agregarAlCarrito(idProducto){
+    const producto = productosEnVenta.find((productosEnVenta) => productosEnVenta.id === idProducto);
+    if (producto != -1){
     carrito.push(producto);
     console.log(carrito);
+    }else{
+        console.log("Lo sentimos, no existe el producto :(")
+    }
 }
 
-agregarAlCarrito({id:001})
-agregarAlCarrito({id:002})
-agregarAlCarrito({id:003})
-agregarAlCarrito({id:004})
-agregarAlCarrito({id:005})
+/* agregarAlCarrito(001)
+agregarAlCarrito(002) 
+agregarAlCarrito(003)
+agregarAlCarrito(004) */
+agregarAlCarrito(001)
 
 ///////////////////////////////////////
 //////////   funcion para  //////////////
@@ -66,7 +71,9 @@ let filtrarPorPrecio = productosEnVenta.filter(filtro);
 
 function filtro(productosEnVenta){
 if (productosEnVenta.precio <= 9000){
-
     console.log(productosEnVenta)
+    return true
+}else{
+    return false
 }
 }
