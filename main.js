@@ -13,7 +13,7 @@ const productosEnVenta = [
 
     {id: 005, nombre:"Celular ZZZ", marca: "Motorola", descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eius ratione cum, atque quibusdam doloremque, iure repellendus voluptates quos odio exercitationem, deserunt illo aliquid! Beatae est minima rem deleniti voluptatibus.", stock: 6,precio: 56000},
 
-    {id: 00, nombre:"Caloventor", marca: "Liliana", descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eius ratione cum, atque quibusdam doloremque, iure repellendus voluptates quos odio exercitationem, deserunt illo aliquid! Beatae est minima rem deleniti voluptatibus.", stock: 6,precio: 8000},
+    {id: 006, nombre:"Caloventor", marca: "Liliana", descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eius ratione cum, atque quibusdam doloremque, iure repellendus voluptates quos odio exercitationem, deserunt illo aliquid! Beatae est minima rem deleniti voluptatibus.", stock: 6,precio: 8000},
 
 ]
 
@@ -35,10 +35,10 @@ function agregarAlCarrito(idProducto){
     }
 }
 
-/* agregarAlCarrito(001)
+agregarAlCarrito(001)
 agregarAlCarrito(002) 
 agregarAlCarrito(003)
-agregarAlCarrito(004) */
+agregarAlCarrito(004)
 agregarAlCarrito(001)
 
 ///////////////////////////////////////
